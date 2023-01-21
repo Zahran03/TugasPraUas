@@ -44,7 +44,7 @@ internal class Program
             Ulang2:
                 Console.WriteLine("Apakah anda sudah menikah? Ketik 1 kalo sudah, Kalo belum Ketik 2");
                 MenikahAtauBelum[j] = Int32.Parse(Console.ReadLine());
-                if (MenikahAtauBelum[j] >= 2 || MenikahAtauBelum[j] <= 1)
+                if (MenikahAtauBelum[j] == 2 || MenikahAtauBelum[j] == 1)
                 {
                     StatusPernikahan[j] = Pernikahan(MenikahAtauBelum[j]);
                     if (StatusPernikahan[j] == "Sudah Menikah")
