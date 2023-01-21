@@ -84,7 +84,6 @@ internal class Program
         Console.SetCursorPosition(14, 5); Console.Write("|Nama");
         Console.SetCursorPosition(28, 5); Console.Write("|Gaji Pokok");
         Console.SetCursorPosition(42, 5); Console.Write("|Status Pernikahan");
-        
         Console.SetCursorPosition(64, 5); Console.Write("|TunjanganAnak");
         Console.SetCursorPosition(78, 5); Console.Write("|Tunjangan Istri");
         Console.SetCursorPosition(94, 5); Console.Write("|Tunjangan");
@@ -95,7 +94,6 @@ internal class Program
             Console.SetCursorPosition(15, 7 + a); Console.Write(Nama[a]);
             Console.SetCursorPosition(29, 7 + a); Console.Write(GajiPokok[a]);
             Console.SetCursorPosition(43, 7 + a); Console.Write(StatusPernikahan[a]);
-            
             Console.SetCursorPosition(65, 7 + a); Console.Write(TunjanganAnak[a]);
             Console.SetCursorPosition(79, 7 + a); Console.Write(TunjanganIstri[a]);
             Console.SetCursorPosition(95, 7 + a); Console.Write(Tunjangan[a]);
