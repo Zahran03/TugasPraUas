@@ -78,8 +78,29 @@ internal class Program
                 Console.WriteLine("Kesalahan Terjadi Karena : " + e.Message);
             }
         }
+        Console.Clear();
+        Console.SetCursorPosition(0, 5); Console.Write("|No");
+        Console.SetCursorPosition(5, 5); Console.Write("|Nip");
+        Console.SetCursorPosition(14, 5); Console.Write("|Nama");
+        Console.SetCursorPosition(28, 5); Console.Write("|Gaji Pokok");
+        Console.SetCursorPosition(42, 5); Console.Write("|Status Pernikahan");
+        
+        Console.SetCursorPosition(64, 5); Console.Write("|TunjanganAnak");
+        Console.SetCursorPosition(78, 5); Console.Write("|Tunjangan Istri");
+        Console.SetCursorPosition(94, 5); Console.Write("|Tunjangan");
+        Console.SetCursorPosition(106, 5); Console.Write("|Gaji Bersih");
         for (int a = 0; a < JumlahArray;a++) {
-            OutputTotal(Nip[a], Nama[a], GajiPokok[a], StatusPernikahan[a], JumlahAnak[a], TunjanganAnak[a], TunjanganIstri[a], Tunjangan[a], GajiBersih[a]);
+            Console.SetCursorPosition(1, 7 + a); Console.Write(a + 1);
+            Console.SetCursorPosition(6, 7 + a); Console.Write(Nip[a]);
+            Console.SetCursorPosition(15, 7 + a); Console.Write(Nama[a]);
+            Console.SetCursorPosition(29, 7 + a); Console.Write(GajiPokok[a]);
+            Console.SetCursorPosition(43, 7 + a); Console.Write(StatusPernikahan[a]);
+            
+            Console.SetCursorPosition(65, 7 + a); Console.Write(TunjanganAnak[a]);
+            Console.SetCursorPosition(79, 7 + a); Console.Write(TunjanganIstri[a]);
+            Console.SetCursorPosition(95, 7 + a); Console.Write(Tunjangan[a]);
+            Console.SetCursorPosition(107, 7 +a); Console.Write(GajiBersih[a]);
+            Console.WriteLine();
         }
     }
     static void PrintPogram()
@@ -121,20 +142,5 @@ internal class Program
             anak = 2;
         }
         return anak;
-    }
-    static void OutputTotal(int nip, string nama, int gajipokok, string statuspernikahan, int jumlahanak, int tunjangananak, int tunjanganistri, int tunjangan, int gajibersih)
-    {
-        Console.WriteLine("=======================================");
-        Console.WriteLine("=============Hasil Ouput===============");
-        Console.WriteLine("=======================================");
-        Console.WriteLine("dengan Nip : " + nip);
-        Console.WriteLine("Atas Nama: " + nama);
-        Console.WriteLine("Dengan Gaji Pokok Sebesar: "+ gajipokok);
-        Console.WriteLine("Status Pernikahan: " + statuspernikahan);
-        Console.WriteLine("Jumlah anak sebanyak: " + jumlahanak);
-        Console.WriteLine("Tunjangan anak sebesar: " + tunjangananak);
-        Console.WriteLine("Tunjangan istri sebesar: " + tunjanganistri);
-        Console.WriteLine("Mendapat Tunjangan Sebesar: "+ tunjangan);
-        Console.WriteLine("Gaji Bersih yang Anda dapat adalah: "+gajibersih);
     }
 }
