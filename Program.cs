@@ -88,18 +88,7 @@ internal class Program
         Console.SetCursorPosition(78, 5); Console.Write("|Tunjangan Istri");
         Console.SetCursorPosition(94, 5); Console.Write("|Tunjangan");
         Console.SetCursorPosition(106, 5); Console.Write("|Gaji Bersih");
-        for (int a = 0; a < JumlahArray;a++) {
-            Console.SetCursorPosition(1, 7 + a); Console.Write(a + 1);
-            Console.SetCursorPosition(6, 7 + a); Console.Write(Nip[a]);
-            Console.SetCursorPosition(15, 7 + a); Console.Write(Nama[a]);
-            Console.SetCursorPosition(29, 7 + a); Console.Write(GajiPokok[a]);
-            Console.SetCursorPosition(43, 7 + a); Console.Write(StatusPernikahan[a]);
-            Console.SetCursorPosition(65, 7 + a); Console.Write(TunjanganAnak[a]);
-            Console.SetCursorPosition(79, 7 + a); Console.Write(TunjanganIstri[a]);
-            Console.SetCursorPosition(95, 7 + a); Console.Write(Tunjangan[a]);
-            Console.SetCursorPosition(107, 7 +a); Console.Write(GajiBersih[a]);
-            Console.WriteLine();
-        }
+        OutputFinal(Nip, Nama, GajiPokok, StatusPernikahan, TunjanganAnak, TunjanganIstri, Tunjangan, GajiBersih, JumlahArray);
     }
     static void PrintPogram()
     {
@@ -140,5 +129,19 @@ internal class Program
             anak = 2;
         }
         return anak;
+    }
+    static void OutputFinal(int[] nip, string[] nama, int[] gajiPokok, string[] statusPernikahan, int[] tunjanganAnak, int[] tunjanganIstri, int[] tunjangan, int[] gajiBersih, int jumlahArray) {
+        for (int a = 0;a<jumlahArray;a++) {
+            Console.SetCursorPosition(1, 7 + a); Console.Write(a + 1);
+            Console.SetCursorPosition(6, 7 + a); Console.Write(nip[a]);
+            Console.SetCursorPosition(15, 7 + a); Console.Write(nama[a]);
+            Console.SetCursorPosition(29, 7 + a); Console.Write(gajiPokok[a]);
+            Console.SetCursorPosition(43, 7 + a); Console.Write(statusPernikahan[a]);
+            Console.SetCursorPosition(65, 7 + a); Console.Write(tunjanganAnak[a]);
+            Console.SetCursorPosition(79, 7 + a); Console.Write(tunjanganIstri[a]);
+            Console.SetCursorPosition(95, 7 + a); Console.Write(tunjangan[a]);
+            Console.SetCursorPosition(107, 7 + a); Console.Write(gajiBersih[a]);
+            Console.WriteLine();
+        }
     }
 }
